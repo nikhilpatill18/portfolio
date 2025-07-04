@@ -1,103 +1,137 @@
+import { TextLoop } from "@/components/ui/text-loop";
+import { BGPattern } from "@/components/bg-pattern";
+import Navbar from "@/components/Navbar";
+import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
+import { WordRotate } from "@/components/ui/word-rotate";
+import Link from "next/link";
+import { PatternCard, PatternCardBody } from "@/components/ui/card-with-ellipsis-pattern";
 import Image from "next/image";
 
-export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+import React from 'react'
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+const page = () => {
+  const skills = [
+    { skill: "React", level: "Intermediate" },
+    { skill: "JavaScript", level: "Advanced" },
+    { skill: "Node.js", level: "Intermediate" },
+    { skill: "Python", level: "Intermediate" },
+    { skill: "HTML/CSS", level: "Advanced" },
+    { skill: "Git", level: "Intermediate" },
+    { skill: "MongoDB", level: "Beginner" },
+    { skill: "Express.js", level: "Intermediate" },
+    { skill: "React Native", level: "Beginner" },
+    { skill: "Tailwind CSS", level: "Advanced" }
+  ];
+
+
+
+  const technologies = [
+    'React', 'Next.js', 'Node.js', 'Express', 'MongoDB', 'Firebase',
+    'JavaScript', 'TypeScript', 'Tailwind CSS', 'Git', 'Vercel', 'AWS'
+  ];
+  const intro = [
+    {
+      text: "Hey,",
+      className: "text-white",
+    },
+    {
+      text: " ", // Add space
+      className: "text-white",
+    },
+    {
+      text: "Nikhil",
+      className: "text-blue-500 dark:text-blue-500",
+    },
+    {
+      text: " ", // Add space
+      className: "text-white",
+    },
+    {
+      text: "here",
+      className: "text-white",
+    },
+  ];
+
+  return (
+    <div className="bg-black min-h-screen">
+      <Navbar />
+      <div className="pt-20 min-h-screen relative">
+        <div className="absolute inset-0 z-0">
+          <BGPattern mask="fade-edges" />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+        {/* Hero Section */}
+        <div id="home" className="container mx-auto px-4 relative z-10">
+          <div className="flex flex-col items-center justify-center min-h-[80vh] text-center">
+
+            {/* Main Heading */}
+            <div className="mb-8">
+              <TypewriterEffectSmooth words={intro} />
+            </div>
+
+            {/* Rotating Words */}
+            <div className="mb-8">
+              <span className="text-2xl md:text-3xl text-gray-300 mr-4">I'm a</span>
+              <WordRotate
+                words={['Web Developer', 'Full Stack Developer', 'Next.js Developer', 'Firebase Expert']}
+                className="text-2xl md:text-3xl font-bold text-blue-400"
+              />
+            </div>
+
+            {/* Description */}
+            <p className="text-lg md:text-xl text-gray-400 max-w-2xl mb-12 leading-relaxed">
+              Passionate developer crafting modern web experiences with cutting-edge technologies.
+              Let's build something amazing together.
+            </p>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 mb-16">
+              <Link href={'#project'} className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors duration-200">
+                View My Work
+              </Link>
+              <Link href='#form' className="px-8 py-3 border border-gray-600 hover:border-gray-400 text-white rounded-lg font-medium transition-colors duration-200">
+                Get In Touch
+              </Link>
+            </div>
+
+            {/* Scroll Indicator */}
+            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+              <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center">
+                <div className="w-1 h-3 bg-gray-400 rounded-full mt-2 animate-pulse"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* about section  */}
+
+        <div className="max-w-6xl mx-auto p-6">
+          <div className="grid  md:grid-row gap-6">
+            <PatternCard className='relative' >
+              <PatternCardBody className={'bg-black'}>
+                <h3 className="text-2xl font-bold mb-4 text-white">
+                  About Me
+                </h3>
+                <div className="space-y-4 text-sm text-white leading-relaxed">
+                  <p>
+                    Hi! I'm <span className="font-semibold text-blue-500 dark:text-blue-500">Patil Nikhil</span>, a second-year IT student at LJ University with a passion for creating digital experiences that blend creativity and functionality.
+                  </p>
+                  <p>
+                    I love building web and mobile applications, and I'm always eager to explore and learn new technologies. More than just writing code, I enjoy debugging and solving tricky bugs — turning problems into solutions is what keeps me excited and motivated.
+                  </p>
+                  <p>
+                    Outside of coding, you'll often find me experimenting with new frameworks, exploring design patterns, or diving into open-source projects to sharpen my skills. My journey as a developer is driven by curiosity, continuous learning, and a genuine love for building things that people find useful.
+                  </p>
+                </div>
+              </PatternCardBody>
+            </PatternCard>
+          </div>
+        </div>
+
+      </div>
+
     </div>
-  );
+  )
 }
+
+export default page
