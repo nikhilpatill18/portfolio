@@ -6,8 +6,10 @@ import { WordRotate } from "@/components/ui/word-rotate";
 import Link from "next/link";
 import { PatternCard, PatternCardBody } from "@/components/ui/card-with-ellipsis-pattern";
 import Image from "next/image";
+import { GlowCard } from "@/components/spotlight-card";
 
 import React from 'react'
+import Project from "@/components/Project";
 
 const page = () => {
   const skills = [
@@ -51,6 +53,41 @@ const page = () => {
       className: "text-white",
     },
   ];
+
+  const projects = [
+    {
+
+      title: 'Todo list',
+      description: 'Project based on React and  ContextApi',
+      techstack: 'React ContextApi',
+      link: 'https://github.com/nikhilpatill18/TodoList/'
+    },
+    {
+      title: 'Sass App',
+      description: 'Frontend using React and Responsive Ui',
+      techstack: 'React Taiwindcss',
+      link: 'https://github.com/nikhilpatill18/saas_app/'
+    },
+    {
+      title: 'Sass App',
+      description: 'Frontend using React and Responsive Ui',
+      techstack: 'React Taiwindcss',
+      link: 'https://github.com/nikhilpatill18/saas_app/'
+    },
+    {
+      title: 'Sass App',
+      description: 'Frontend using React and Responsive Ui',
+      techstack: 'React Taiwindcss',
+      link: 'https://github.com/nikhilpatill18/saas_app/'
+    },
+    {
+      title: 'Sass App',
+      description: 'Frontend using React and Responsive Ui',
+      techstack: 'React Taiwindcss',
+      link: 'https://github.com/nikhilpatill18/saas_app/'
+    },
+
+  ]
 
   return (
     <div className="bg-black min-h-screen">
@@ -105,7 +142,7 @@ const page = () => {
 
         {/* about section  */}
 
-        <div className="max-w-6xl mx-auto p-6">
+        <div id="about" className="max-w-6xl mx-auto p-6">
           <div className="grid  md:grid-row gap-6">
             <PatternCard className='relative' >
               <PatternCardBody className={'bg-black'}>
@@ -127,6 +164,27 @@ const page = () => {
             </PatternCard>
           </div>
         </div>
+
+        {/* project */}
+
+
+        <div id="project" className="flex justify-center items-center gap-10 flex-col">
+          <h1 className="text-5xl bg-black">Project</h1>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+
+            {
+              projects.map((project, idx) => <Project key={idx} title={project.title} description={project.description} techstack={project.techstack} link={project.link} />)
+            }
+          </div>
+
+
+        </div>
+
+
+        {/* contact uS form */}
+
+        
+
 
       </div>
 

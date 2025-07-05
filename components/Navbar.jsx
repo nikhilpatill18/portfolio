@@ -6,9 +6,9 @@ import { Home, User, Briefcase, FileText } from 'lucide-react'
 const Navbar = () => {
     const navItems = [
         { name: 'Home', url: '#', icon: Home },
-        { name: 'About', url: '#', icon: User },
-        { name: 'Projects', url: '#', icon: Briefcase },
-        { name: 'Resume', url: '#', icon: FileText }
+        { name: 'Who i Am', url: '#about', icon: User },
+        { name: 'What i Do', url: '#project', icon: Briefcase },
+        { name: 'Connect me', url: '#', icon: FileText }
 
     ]
     return (
