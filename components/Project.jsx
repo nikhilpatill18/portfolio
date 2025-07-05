@@ -21,7 +21,7 @@ const Project = ({ title, description, techstack, link }) => {
                     </p>
                     <div className="flex gap-5">
                         {
-                            tectstack.map((tech) => (<span>{tech}</span>))
+                            tectstack.map((tech, idx) => (<span key={idx}>{tech}</span>))
                         }
                     </div>
 

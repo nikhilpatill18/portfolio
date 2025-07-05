@@ -1,4 +1,3 @@
-import { TextLoop } from "@/components/ui/text-loop";
 import { BGPattern } from "@/components/bg-pattern";
 import Navbar from "@/components/Navbar";
 import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
@@ -10,6 +9,7 @@ import { GlowCard } from "@/components/spotlight-card";
 
 import React from 'react'
 import Project from "@/components/Project";
+import { Contact2 } from "@/components/contact-2";
 
 const page = () => {
   const skills = [
@@ -176,14 +176,14 @@ const page = () => {
               projects.map((project, idx) => <Project key={idx} title={project.title} description={project.description} techstack={project.techstack} link={project.link} />)
             }
           </div>
+        </div>
+        {/* Contact us */}
+
+        <div className="relative">
+          <Contact2 title="Contact me" description="Lets Connect and build something Different" phone="(+91) 7226052966" email="nikhilpatil6060@gmail.com" />
 
 
         </div>
-
-
-        {/* contact uS form */}
-
-        
 
 
       </div>
