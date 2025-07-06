@@ -6,78 +6,91 @@ import Link from "next/link";
 import { PatternCard, PatternCardBody } from "@/components/ui/card-with-ellipsis-pattern";
 import Image from "next/image";
 import { GlowCard } from "@/components/spotlight-card";
+import { Logos3 } from "@/components/logos3";
 
 import React from 'react'
 import Project from "@/components/Project";
 import { Contact2 } from "@/components/contact-2";
 
 const page = () => {
-  const skills = [
-    {
-      name: "React",
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-    },
-    {
-      name: "Next.js",
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
-    },
-    {
-      name: "JavaScript",
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-    },
-    {
-      name: "TypeScript",
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
-    },
-    {
-      name: "HTML5",
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-    },
-    {
-      name: "CSS3",
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
-    },
-    {
-      name: "Tailwind CSS",
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"
-    },
-    {
-      name: "Node.js",
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
-    },
-    {
-      name: "Express",
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
-    },
-    {
-      name: "MongoDB",
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
-    },
-    {
-      name: "Firebase",
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"
-    },
-    {
-      name: "Git",
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
-    },
-    {
-      name: "GitHub",
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
-    },
-    {
-      name: "Java",
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
-    },
-    {
-      name: "Python",
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
-    },
-    {
-      name: "Flask",
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg"
-    }
-  ];
+  const skills = {
+    heading: "What I Know",
+    logos: [
+      {
+        id: "logo-html",
+        description: "HTML",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+        className: "h-8 w-auto",
+      },
+      {
+        id: "logo-css",
+        description: "CSS",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+        className: "h-8 w-auto",
+      },
+      {
+        id: "logo-js",
+        description: "JavaScript",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+        className: "h-8 w-auto",
+      },
+      {
+        id: "logo-react",
+        description: "React",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+        className: "h-8 w-auto",
+      },
+      {
+        id: "logo-node",
+        description: "Node.js",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+        className: "h-8 w-auto",
+      },
+      // {
+      //   id: "logo-express",
+      //   description: "Express",
+      //   image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+      //   className: "h-8 w-auto",
+      // },
+      {
+        id: "logo-nextjs",
+        description: "Next.js",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+        className: "h-8 w-auto",
+      },
+      {
+        id: "logo-firebase",
+        description: "Firebase",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
+        className: "h-8 w-auto",
+      },
+      {
+        id: "logo-git",
+        description: "Git",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+        className: "h-8 w-auto",
+      },
+      {
+        id: "logo-github",
+        description: "GitHub",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+        className: "h-8 w-auto",
+      },
+      {
+        id: "logo-java",
+        description: "Java",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+        className: "h-8 w-auto",
+      },
+      {
+        id: "logo-python",
+        description: "Python",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+        className: "h-8 w-auto",
+      }
+    ],
+  };
+
 
 
   const intro = [
@@ -215,8 +228,8 @@ const page = () => {
         </div>
 
         {/* skills */}
-        <div id="skills">
-
+        <div id="skills" className="relative mx-52">
+          <Logos3 {...skills} />
         </div>
 
         {/* project */}
