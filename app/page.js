@@ -13,24 +13,73 @@ import { Contact2 } from "@/components/contact-2";
 
 const page = () => {
   const skills = [
-    { skill: "React", level: "Intermediate" },
-    { skill: "JavaScript", level: "Advanced" },
-    { skill: "Node.js", level: "Intermediate" },
-    { skill: "Python", level: "Intermediate" },
-    { skill: "HTML/CSS", level: "Advanced" },
-    { skill: "Git", level: "Intermediate" },
-    { skill: "MongoDB", level: "Beginner" },
-    { skill: "Express.js", level: "Intermediate" },
-    { skill: "React Native", level: "Beginner" },
-    { skill: "Tailwind CSS", level: "Advanced" }
+    {
+      name: "React",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+    },
+    {
+      name: "Next.js",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
+    },
+    {
+      name: "JavaScript",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+    },
+    {
+      name: "TypeScript",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+    },
+    {
+      name: "HTML5",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+    },
+    {
+      name: "CSS3",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+    },
+    {
+      name: "Tailwind CSS",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"
+    },
+    {
+      name: "Node.js",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+    },
+    {
+      name: "Express",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+    },
+    {
+      name: "MongoDB",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+    },
+    {
+      name: "Firebase",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"
+    },
+    {
+      name: "Git",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+    },
+    {
+      name: "GitHub",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+    },
+    {
+      name: "Java",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+    },
+    {
+      name: "Python",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+    },
+    {
+      name: "Flask",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg"
+    }
   ];
 
 
-
-  const technologies = [
-    'React', 'Next.js', 'Node.js', 'Express', 'MongoDB', 'Firebase',
-    'JavaScript', 'TypeScript', 'Tailwind CSS', 'Git', 'Vercel', 'AWS'
-  ];
   const intro = [
     {
       text: "Hey,",
@@ -126,7 +175,7 @@ const page = () => {
               <Link href={'#project'} className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors duration-200">
                 View My Work
               </Link>
-              <Link href='#form' className="px-8 py-3 border border-gray-600 hover:border-gray-400 text-white rounded-lg font-medium transition-colors duration-200">
+              <Link href='#contact' className="px-8 py-3 border border-gray-600 hover:border-gray-400 text-white rounded-lg font-medium transition-colors duration-200">
                 Get In Touch
               </Link>
             </div>
@@ -165,6 +214,11 @@ const page = () => {
           </div>
         </div>
 
+        {/* skills */}
+        <div id="skills">
+
+        </div>
+
         {/* project */}
 
 
@@ -179,10 +233,8 @@ const page = () => {
         </div>
         {/* Contact us */}
 
-        <div className="relative">
+        <div className="relative" id="contact">
           <Contact2 title="Contact me" description="Lets Connect and build something Different" phone="(+91) 7226052966" email="nikhilpatil6060@gmail.com" />
-
-
         </div>
 
 
