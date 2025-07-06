@@ -222,15 +222,15 @@ const page = () => {
         </div>
 
         {/* skills */}
-        <div id="skills" className="relative mx-52">
+        <div id="skills" className="relative">
           <Logos3 {...skills} />
         </div>
 
         {/* project */}
 
 
-        <div id="project" className="flex justify-center items-center gap-10 flex-col">
-          <h1 className="text-5xl bg-black">Project</h1>
+        <div id="project" className="relative flex justify-center items-center gap-10 flex-col">
+          <h1 className="text-5xl">Projects</h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
 
             {
@@ -241,7 +241,7 @@ const page = () => {
         {/* Contact us */}
 
         <div className="relative" id="contact">
-          <Contact2 title="Contact me" description="Lets Connect and build something Different" phone="(+91) 7226052966" email="nikhilpatil6060@gmail.com" />
+          <Contact2 title="Contact me" description="Lets Connect and build something Different" phone="(+91) 7226052966" email="nikhilpatil6060@gmail.com" web={{ label: 'LinkedIn', url: 'https://www.linkedin.com/in/nikhil-patil-p18/' }} />
         </div>
 
 

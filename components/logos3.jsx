@@ -66,16 +66,16 @@ const Logos3 = ({
   ]
 }) => {
   return (
-    <section className="py-64">
-      <div className="container flex flex-col items-center text-center">
+    <section className="py-64 ">
+      <div className="container flex flex-col items-center justify-center text-center">
         <h1 className="my-6 text-2xl font-bold text-pretty lg:text-5xl">
           {heading}
         </h1>
       </div>
-      <div className="pt-10 md:pt-16 lg:pt-20">
+      <div className="pt-10 md:pt-16 lg:pt-20  ">
         <div
-          className="relative mx-auto flex items-center justify-center lg:max-w-5xl">
-          <Carousel opts={{ loop: true }} plugins={[AutoScroll({ playOnInit: true })]}>
+          className="relative mx-auto   flex items-center justify-center lg:max-w-5xl  overflow-hidden">
+          <Carousel opts={{ loop: true }} plugins={[AutoScroll({ playOnInit: true })]} >
             <CarouselContent className="ml-0">
               {logos.map((logo) => (
                 <CarouselItem
