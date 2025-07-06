@@ -7,8 +7,8 @@ const Navbar = () => {
     const navItems = [
         { name: 'Home', url: '#home', icon: Home },
         { name: 'Who i Am', url: '#about', icon: User },
-        { name: 'What i Do', url: '#project', icon: Briefcase },
         { name: 'What i know', url: '#skills', icon: Languages },
+        { name: 'What i Do', url: '#project', icon: Briefcase },
         { name: 'Connect me', url: '#contact', icon: Contact }
 
     ]

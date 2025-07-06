@@ -131,22 +131,16 @@ const page = () => {
       link: 'https://github.com/nikhilpatill18/saas_app/'
     },
     {
-      title: 'Sass App',
-      description: 'Frontend using React and Responsive Ui',
-      techstack: 'React Taiwindcss',
-      link: 'https://github.com/nikhilpatill18/saas_app/'
+      title: 'Chat Application',
+      description: 'Full Stack Chat Appilcation using Mern',
+      techstack: 'MERN Zustand',
+      link: 'https://github.com/nikhilpatill18/Chat-app/'
     },
     {
-      title: 'Sass App',
-      description: 'Frontend using React and Responsive Ui',
-      techstack: 'React Taiwindcss',
-      link: 'https://github.com/nikhilpatill18/saas_app/'
-    },
-    {
-      title: 'Sass App',
-      description: 'Frontend using React and Responsive Ui',
-      techstack: 'React Taiwindcss',
-      link: 'https://github.com/nikhilpatill18/saas_app/'
+      title: 'Agri Trust',
+      description: 'Project made At 36 hour Hackthon',
+      techstack: 'MERN  Shadcn',
+      link: 'https://github.com/nikhilpatill18/Agritrust'
     },
 
   ]
