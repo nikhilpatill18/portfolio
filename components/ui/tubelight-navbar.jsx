@@ -6,8 +6,10 @@ import { cn } from "@/lib/utils"
 
 export function NavBar({
   items,
-  className
+  className, activeId
 }) {
+  console.log(items);
+
   const [activeTab, setActiveTab] = useState(items[0].name)
   const [isMobile, setIsMobile] = useState(false)
 
@@ -31,7 +33,7 @@ export function NavBar({
         className="flex items-center gap-3 bg-background/5 border border-border backdrop-blur-lg py-1 px-1 rounded-full shadow-lg">
         {items.map((item) => {
           const Icon = item.icon
-          const isActive = activeTab === item.name
+          const isActive = activeTab === item.name || item.url === `#${activeId}`
 
           return (
             <Link

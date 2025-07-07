@@ -12,6 +12,7 @@ export const Contact2 = ({
   email = "email@example.com",
   web = { label: "shadcnblocks.com", url: "https://shadcnblocks.com" }
 }) => {
+  const formdata = new FormData();
   const [firstname, setFirstname] = useState('');
   const [lastname, setLastname] = useState('');
   const [useremail, setUseremail] = useState('');
@@ -19,16 +20,26 @@ export const Contact2 = ({
   const [message, setMessage] = useState('');
 
   const handleSubmit = async () => {
-    const formdata = new FormData();
     formdata.append('firstname', firstname);
     formdata.append('lastname', lastname);
     formdata.append('email', useremail);
     formdata.append('subject', subject);
     formdata.append('message', message);
     console.log(formdata);
+    const data = {
+      firstname,
+      lastname,
+      email: useremail,
+      subject,
+      message
+    };
 
 
-    const response = await fetch('/api/home', { method: 'POST', body: { message: 'hello' } });
+    const response = await fetch('/api/contact', {
+      method: 'POST', body: JSON.stringify(data), headers: {
+        'Content-Type': 'application/json'
+      }
+    });
     console.log(await response.json());
   };
 
@@ -68,7 +79,9 @@ export const Contact2 = ({
                   onChange={(e) => {
                     setFirstname(e.target.value);;
                   }
+
                   }
+                  className='bg-gray-800'
                 />
               </div>
               <div className="grid w-full items-center gap-1.5">
@@ -79,6 +92,7 @@ export const Contact2 = ({
                   placeholder="Last Name"
                   value={lastname}
                   onChange={(e) => setLastname(e.target.value)}
+                   className='bg-gray-800'
                 />
               </div>
             </div>
@@ -90,6 +104,7 @@ export const Contact2 = ({
                 placeholder="Email"
                 value={useremail}
                 onChange={(e) => setUseremail(e.target.value)}
+                 className='bg-gray-800'
               />
             </div>
             <div className="grid w-full items-center gap-1.5">
@@ -100,6 +115,7 @@ export const Contact2 = ({
                 placeholder="Subject"
                 value={subject}
                 onChange={(e) => setSubject(e.target.value)}
+                 className='bg-gray-800'
               />
             </div>
             <div className="grid w-full gap-1.5">
@@ -109,6 +125,7 @@ export const Contact2 = ({
                 placeholder="Type your message here."
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
+                 className='bg-gray-800'
               />
             </div>
             <Button onClick={handleSubmit} className="w-full">Send Message</Button>
