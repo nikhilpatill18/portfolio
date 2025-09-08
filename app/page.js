@@ -13,7 +13,7 @@ import { Contact2 } from "@/components/contact-2";
 
 const page = () => {
   const skills = {
-    heading: "What I Know",
+    heading: "My Tech Stack",
     logos: [
       {
         id: "logo-html",

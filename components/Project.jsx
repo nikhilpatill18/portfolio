@@ -14,8 +14,6 @@ const Project =({
   status = "Completed",
   featured = false 
 }) => {
-  console.log(image,"image");
-  
   return (
     <div className={`group relative bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-xl overflow-hidden hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10 ${featured ? 'ring-1 ring-blue-500/30' : ''}`}>
       
