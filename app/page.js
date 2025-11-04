@@ -7,13 +7,15 @@ import { PatternCard, PatternCardBody } from "@/components/ui/card-with-ellipsis
 import Image from "next/image";
 import { GlowCard } from "@/components/spotlight-card";
 import { Logos3 } from "@/components/logos3";
-import React from 'react'
-import Project from "@/components/Project";
+import React, { Suspense } from 'react'
+const Project=React.lazy(()=>import('../components/Project'))
 import { Contact2 } from "@/components/contact-2";
+import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
+import { Spotlight } from "@/components/ui/spotlight";
 
 const page = () => {
   const skills = {
-    heading: "My Tech Stack",
+    heading: "   My Tech Stack",
     logos: [
       {
         id: "logo-html",
@@ -98,7 +100,7 @@ const page = () => {
       className: "text-white",
     },
     {
-      text: " ", // Add space
+      text: "\n", // Add space
       className: "text-white",
     },
     {
@@ -159,12 +161,14 @@ const page = () => {
 
 
   return (
-    <div className="bg-black min-h-screen">
+   
+      <div className="bg-black min-h-screen">
+       
       <Navbar />
       <div className="pt-20 min-h-screen relative">
         <div className="absolute inset-0 z-0">
           <BGPattern mask="fade-edges" />
-        </div>
+        </div>  
 
         {/* Hero Section */}
         <div id="home" className="container mx-auto px-4 relative z-10">
@@ -206,7 +210,7 @@ const page = () => {
 
         {/* about section  */}
 
-        <div id="about" className="max-w-6xl mx-auto p-6">
+        <div id="about" className="max-w-6xl mx-auto p-6 py-10">
           <div className="grid  md:grid-row gap-6">
             <PatternCard className='relative' >
               <PatternCardBody className={'bg-black'}>
@@ -215,7 +219,7 @@ const page = () => {
                 </h3>
                 <div className="space-y-4 text-sm text-white leading-relaxed">
                   <p>
-                    Hi! I'm <span className="font-semibold text-blue-500 dark:text-blue-500">Patil Nikhil</span>, a second-year IT student at LJ University with a passion for creating digital experiences that blend creativity and functionality.
+                    Hi! I'm <span className="font-semibold text-blue-500 dark:text-blue-500">Patil Nikhil</span>, a Third-year IT student at LJ University with a passion for creating digital experiences that blend creativity and functionality.
                   </p>
                   <p>
                     I love building web and mobile applications, and I'm always eager to explore and learn new technologies. More than just writing code, I enjoy debugging and solving tricky bugs — turning problems into solutions is what keeps me excited and motivated.
@@ -239,10 +243,14 @@ const page = () => {
 
         <div id="project" className="relative flex justify-center items-center gap-10 flex-col">
           <h1 className="text-5xl">Projects</h1>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 px-10">
 
             {
-              projects.map((project, idx) => <Project key={idx} {...project} />)
+              <Suspense fallback={<p>Loading</p>}>
+                {
+                  projects.map((project, idx) => <Project key={idx} {...project} />)
+                }
+              </Suspense>
             }
           </div>
         </div>

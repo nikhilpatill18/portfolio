@@ -113,8 +113,13 @@ const Project =({
 
         {/* Tech Stack */}
         <div className="mb-4">
-          <p className="text-xs text-gray-500 mb-2">Tech Stack</p>
-          <p className="text-sm text-gray-300 font-medium">{techstack}</p>
+          <p className="text-sm text-gray-500 mb-2 font-bold">Tech Stack</p>
+          <div className='flex flex-wrap gap-2'>
+            {
+            techstack.split(",").map((t)=><p
+            className="px-3 py-1 rounded-full text-sm font-medium bg-gray-800 text-gray-200 border border-gray-700 hover:bg-gray-700 hover:text-white shadow-sm hover:shadow-md transition-all duration-200">{t} </p>)
+            }
+          </div>
         </div>
 
         {/* Action Buttons */}
