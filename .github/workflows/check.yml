@@ -1,0 +1,12 @@
+name: c2
+
+on: push
+
+jobs: 
+      build:
+          runs-on: ubuntu-latest
+
+          steps:
+              - name: SayHello
+                run: echo "hello this is first cicd"
+
