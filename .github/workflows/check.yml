@@ -8,5 +8,8 @@ jobs:
 
           steps:
               - name: SayHello
-                run: echo "hello this is first cicd"
+                env: 
+                  APP_ENV: "This is an env"
+                run: echo "hello this is first cicd $APP_ENV"
+
 
