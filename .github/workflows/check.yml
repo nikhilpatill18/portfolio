@@ -11,5 +11,9 @@ jobs:
                 env: 
                   APP_ENV: "This is an env"
                 run: echo "hello this is first cicd $APP_ENV"
+              - name: hello2
+                env:
+                  DB_PASSWORD: {{secrets.DB_PASSWORD}}
+                run: echo "hello this is env from ui $DB_PASSWORD and step level"
 
 
