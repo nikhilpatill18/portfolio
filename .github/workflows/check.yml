@@ -10,10 +10,10 @@ jobs:
               - name: SayHello
                 env: 
                   APP_ENV: "This is an env"
-                run: echo "this is first cicd $APP_ENV"
+                run: echo "hi this is first cicd $APP_ENV"
               - name: check2
                 env:
                   DB_PASSWORD: ${{secrets.DB_PASSWORD}}
-                run: echo " this is env from ui $DB_PASSWORD and step level"
+                run: echo " Hi this is env from ui $DB_PASSWORD and step level"
 
 
