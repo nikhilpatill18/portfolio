@@ -14,6 +14,6 @@ jobs:
               - name: check2
                 env:
                   DB_PASSWORD: ${{secrets.DB_PASSWORD}}
-                run: echo " Hi this is env from ui $DB_PASSWORD and step level"
+                run: echo " Hi this is env from ui $DB_PASSWORD and step level ${{github.action_repository}}"
 
 
